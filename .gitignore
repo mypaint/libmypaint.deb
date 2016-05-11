@@ -1,0 +1,10 @@
+*.swp
+*.bak
+*.BAK
+*~
+files
+tmp
+libmypaint
+libmypaint-dev
+*.debhelper.log
+*.substvars

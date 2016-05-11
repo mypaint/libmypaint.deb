@@ -1,0 +1,13 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: libmypaint
+Upstream-Contact: Andrew Chadwick <a.t.chadwick@gmail.com>
+Source: http://mypaint.org/
+Comment: This package was debianized by Andrew Chadwick, based on
+  earlier work by Gürkan Sengün.
+
+Files: *
+Copyright: Copyright (C) 2008-2016 Martin Renold and the MyPaint Development Team
+  Copyright 2008-2011 Martin Renold <martinxyz@gmx.ch>
+  Copyright 2012 Jon Nordby <jononor@gmail.com>
+License: ISC
+
