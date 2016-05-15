@@ -14,10 +14,10 @@ build-arch: build-stamp
 
 build-indep: build-stamp
 
-
 build-stamp:
 	dh_testdir
-	./autogen.sh --prefix=/usr
+	./autogen.sh
+	./configure --prefix=/usr
 	make
 	touch $@
 
