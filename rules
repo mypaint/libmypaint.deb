@@ -25,7 +25,7 @@ clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp
-	make maintainer-clean
+	if test -f Makefile; then make maintainer-clean; fi
 	dh_clean
 
 install: build
@@ -34,12 +34,9 @@ install: build
 	dh_prep
 	dh_installdirs
 	DESTDIR=$(CURDIR)/debian/tmp make install
-	dh_install --fail-missing 
+	dh_install --fail-missing --exclude=libmypaint.la
 	dh_installchangelogs ChangeLog
 	dh_installdocs
-	dh_installmenu
-	#dh_python2
-	#dh_installman
 	dh_link
 	dh_strip
 	dh_compress

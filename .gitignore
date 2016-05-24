@@ -4,7 +4,8 @@
 *~
 files
 tmp
-libmypaint
+libmypaint0
 libmypaint-dev
+gir1.2-libmypaint0
 *.debhelper.log
 *.substvars
