@@ -2,7 +2,7 @@ Source: libmypaint
 Section: graphics
 Priority: optional
 Maintainer: Andrew Chadwick <a.t.chadwick@gmail.com>
-Build-Depends: debhelper (>= 9), autoconf, libjson-c-dev,
+Build-Depends: debhelper (>= 9), autoconf, libjson-c-dev, intltool,
  dpkg-dev (>= 1.16.1~), gettext, libgirepository1.0-dev, libglib2.0-dev
 Standards-Version: 3.9.6
 Homepage: http://mypaint.org/
