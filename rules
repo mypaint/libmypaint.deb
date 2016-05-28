@@ -1,5 +1,6 @@
 #!/usr/bin/make -f
-# Debian/rules for building libmypaint from git.
+# Hybrid debian/rules for building libmypaint from git OR a release
+# tarball.
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
@@ -16,7 +17,9 @@ build-indep: build-stamp
 
 build-stamp:
 	dh_testdir
-	./autogen.sh
+	if test -f autogen.sh; then \
+	  ./autogen.sh; \
+	fi
 	./configure --prefix=/usr
 	make
 	touch $@
@@ -25,7 +28,11 @@ clean:
 	dh_testdir
 	dh_testroot
 	rm -f build-stamp
-	if test -f Makefile; then make maintainer-clean; fi
+	if test -f autogen.sh; then \
+	  make maintainer-clean || true; \
+	else \
+	  make distclean || true; \
+	fi
 	dh_clean
 
 install: build
