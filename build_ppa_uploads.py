@@ -15,8 +15,8 @@ import tempfile
 SUPPORTED_UBUNTU_SERIES = (
     "trusty",
     "vivid",
-    "wily",
     "xenial",
+    "yakkety",
 )
 TAILORED_VERSION_TMPL = ("{upstream_version}-{deb_revision_base}"
                          "ppa1~{ubuntu_series}1")
