@@ -41,7 +41,7 @@ install: build
 	dh_prep
 	dh_installdirs
 	DESTDIR=$(CURDIR)/debian/tmp make install
-	dh_install --fail-missing --exclude=libmypaint.la
+	dh_install --fail-missing --exclude=libmypaint-2.0.la
 	dh_installdocs
 	dh_link
 	dh_strip
